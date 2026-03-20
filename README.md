@@ -1,4 +1,4 @@
-# Laravel 10 輕鬆儲存不確切值
+# Laravel 11 輕鬆儲存不確切值
 
 引入 spatie 的 valuestore 套件來擴增輕鬆儲存不確切值，以 JavaScript Object Notation (JSON) 文件的形式儲存資料。
 
@@ -16,15 +16,11 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
-```sh
-$ php artisan migrate --seed
-```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/setting` 來進行設定資料儲存並顯示。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/bDb25st.png)
+![](https://i.imgur.com/S9DpZoa.png)
 > 相當容易閱讀和寫入，同時也能讓軟體容易剖析和產生

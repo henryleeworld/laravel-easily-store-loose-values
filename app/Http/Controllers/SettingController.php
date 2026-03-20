@@ -9,14 +9,14 @@ class SettingController extends Controller
     public function show() 
     {
         $settingAry = [
-            'title'    => '亨利的世界',
+            'title'    => __('Henry\'s world'),
             'paginate' => rand(1, 100),
         ];
-        $pathToFile = config_path('settings.json');
+        $pathToFile = storage_path('settings/settings.json');
         $valuestore = Valuestore::make($pathToFile);
         $valuestore->put($settingAry);
         foreach ($valuestore->all() as $key => $value) {
-            echo '鍵值「' . $key . '」的' . '對應值【' . $value . '】' . PHP_EOL;
+            echo __('Key \':key\' corresponding value is \':value\'', ['key' => $key, 'value' => $value]) . PHP_EOL;
         }
     }
 }
